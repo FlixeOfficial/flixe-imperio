@@ -1,0 +1,107 @@
+<!-- HTML -->
+<div id="dynamicContent">
+  <!-- Dynamic HTML content will be rendered based on JavaScript instructions -->
+</div>
+
+<!-- CSS Styling -->
+<style>
+  /* Optional: Place your CSS styles here to define the appearance of your dynamic content */
+
+  /* Example Below */
+  #dynamicContent {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  /* Add more styles as needed */
+</style>
+
+<!-- JavaScript -->
+<script>
+  // Block-1: Defining Connection Instructions
+  // Connection instructions define how external applications can customize this content.
+  const connectionInstructions = {
+    params: [
+      // Background color customization parameter
+      {
+        name: "color", // Parameter name
+        type: "color", // Type of input expected (color picker)
+        defaultValue: "#ff0000", // Default value for the parameter
+        label: "Background Color", // Human-readable label for UI
+      },
+      // Text content customization parameter
+      {
+        name: "content",
+        type: "text",
+        defaultValue: "Hello, world!",
+        label: "Welcome Text",
+      },
+      // Number customization parameter
+      {
+        name: "customNumber",
+        type: "number",
+        defaultValue: 42,
+        label: "Custom Number",
+      },
+      // Content visibility customization parameter
+      {
+        name: "visibility",
+        type: "select",
+        options: ["visible", "hidden"],
+        defaultValue: "visible",
+        label: "Element Visibility",
+      },
+      // Background image customization parameter
+      {
+        name: "backgroundImage",
+        type: "file",
+        accept: ".png,.jpg,.jpeg",
+        label: "Background Image",
+      },
+      // Add more parameters here as needed 
+      // Alloed Types: color, text, number, select, file
+    ],
+    // Specifies the function to call for updating the content dynamically.
+    updateFunction: "updateDynamicContent",
+  };
+
+  // Block-2: Function to Dynamically Update Content
+  // Updates content dynamically based on input from an external application.
+  window.updateDynamicContent = (paramName, value) => {
+    // Add logic to update content based on paramName uisng switch or if-else.
+    // Example:
+    switch (paramName) {
+      case "color":
+        document.body.style.backgroundColor = value;
+        break;
+      case "content":
+        document.getElementById("dynamicText").innerText = value;
+        break;
+      case "visibility":
+        document.getElementById("dynamicContent").style.visibility = value;
+        break;
+      case "backgroundImage":
+        // handleBackgroundUpdate(value);
+        break;
+    }
+    console.log(`Updated ${paramName} to ${value}`);
+  };
+
+  // Block-3: Expose Connection Instructions to Parent Window
+  // Exposes the defined connection instructions for external applications.
+  window.getConnectionInstructions = () => connectionInstructions;
+
+  // Block-4: Initializing Dynamic Content
+  // Sets up the content with default values upon page load.
+  const initializeDynamicContent = () => {
+    connectionInstructions.params.forEach((param) => {
+      window.updateDynamicContent(param.name, param.defaultValue);
+    });
+  };
+
+  // Call initialize function when the document is fully loaded.
+  document.addEventListener("DOMContentLoaded", initializeDynamicContent);
+</script>

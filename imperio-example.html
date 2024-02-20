@@ -1,0 +1,1574 @@
+<html>
+  <div class="light-scene" id="light-scene">
+    <div class="ray-scene">
+      <div class="ray ray1"></div>
+      <div class="ray ray2"></div>
+      <div class="ray ray3"></div>
+      <div class="ray ray4"></div>
+      <div class="ray ray5"></div>
+      <div class="ray ray6"></div>
+      <div class="ray ray7"></div>
+      <div class="ray ray8"></div>
+      <div class="ray ray9"></div>
+      <div class="ray ray10"></div>
+    </div>
+  </div>
+
+  <div class="crsl-ctn">
+    <div class="crsl-all-cells-ctn" id="carousel">
+      <div class="crsl-cell">
+        <div class="package2-scene">
+          <div class="holder-shape">
+            <div class="ft face">
+              <span class="product-name">Diamond Sword</span>
+              <span class="product-info">enter text here</span>
+            </div>
+          </div>
+          <div class="dome-shape">
+            <div class="face ft"></div>
+            <div class="face bk"></div>
+            <div class="face rt"></div>
+            <div class="face lt"></div>
+            <div class="face bm">
+              <div class="logo"></div>
+            </div>
+            <div class="face tp"></div>
+            <div class="cr cr-0">
+              <div class="face side s0"></div>
+              <div class="face side s1"></div>
+              <div class="face side s2"></div>
+            </div>
+            <div class="cr cr-1">
+              <div class="face side s0"></div>
+              <div class="face side s1"></div>
+              <div class="face side s2"></div>
+            </div>
+            <div class="cr cr-2">
+              <div class="face side s0"></div>
+              <div class="face side s1"></div>
+              <div class="face side s2"></div>
+            </div>
+            <div class="cr cr-3">
+              <div class="face side s0"></div>
+              <div class="face side s1"></div>
+              <div class="face side s2"></div>
+            </div>
+          </div>
+          <div class="sword-shape"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
+
+<style>
+  @font-face {
+    font-family: "Minecraft";
+    src: url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.eot");
+    src: url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.eot?#iefix")
+        format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff2")
+        format("woff2"),
+      url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff")
+        format("woff"),
+      url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.ttf")
+        format("truetype"),
+      url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.svg#Minecraft")
+        format("svg");
+  }
+
+  @font-face {
+    font-family: "Minecraft Title";
+    src: url("//db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.eot");
+    src: url("//db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.eot?#iefix")
+        format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.woff2")
+        format("woff2"),
+      url("//db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.woff")
+        format("woff"),
+      url("//db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.ttf")
+        format("truetype"),
+      url("//db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.svg#Minecraft Ten")
+        format("svg");
+  }
+
+  @font-face {
+    font-family: "Minecraft Enchantment";
+    src: url("//db.onlinewebfonts.com/t/82724711928097a9b800297e88bbfeb1.eot");
+    src: url("//db.onlinewebfonts.com/t/82724711928097a9b800297e88bbfeb1.eot?#iefix")
+        format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/82724711928097a9b800297e88bbfeb1.woff2")
+        format("woff2"),
+      url("//db.onlinewebfonts.com/t/82724711928097a9b800297e88bbfeb1.woff")
+        format("woff"),
+      url("//db.onlinewebfonts.com/t/82724711928097a9b800297e88bbfeb1.ttf")
+        format("truetype"),
+      url("//db.onlinewebfonts.com/t/82724711928097a9b800297e88bbfeb1.svg#minecraft enchantment")
+        format("svg");
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    user-select: none;
+    background-color: #000000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+
+  .ender-chest-scene {
+    transform: perspective(10500px) rotateX(-20deg) rotateY(-40deg)
+      rotateZ(0deg) translateY(30vw);
+    position: absolute;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+  }
+
+  .ender-chest-scene .face {
+    filter: blur(1px);
+  }
+
+  .ender-chest-scene .chest-storage-shape {
+    width: 42vw;
+    height: 42vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ender-chest-scene .chest-storage-shape .face {
+    position: absolute;
+  }
+
+  .ender-chest-scene .chest-storage-shape .ft {
+    width: 42vw;
+    height: 28vw;
+    transform-origin: 50%;
+    transform: translateX(0) translateY(0) translateZ(21vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_storage_ft_bk.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-storage-shape .bk {
+    width: 42vw;
+    height: 28vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(0deg) translateX(0vw) translateY(0vw)
+      translateZ(-21vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_storage_ft_bk.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-storage-shape .rt {
+    width: 42vw;
+    height: 28vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translateX(0vw)
+      translateY(0vw) translateZ(-21vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_storage_lt_rt.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-storage-shape .lt {
+    width: 42vw;
+    height: 28vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translateX(0vw)
+      translateY(0vw) translateZ(21vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_storage_lt_rt.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-storage-shape .tp {
+    width: 42vw;
+    height: 42vw;
+    transform-origin: 50%;
+    transform: rotateX(-90deg) rotateY(-180deg) rotateZ(-180deg) translateX(0)
+      translateY(0vw) translateZ(14vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_storage_tp.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-storage-shape .bm {
+    width: 42vw;
+    height: 42vw;
+    transform-origin: 50%;
+    transform: rotateX(-90deg) rotateY(180deg) rotateZ(-180deg) translateX(0)
+      translateY(0vw) translateZ(-14vw);
+  }
+
+  .ender-chest-scene .chest-cover-shape {
+    transform-style: preserve-3d;
+    transform: translateY(-32.6666666667vw) translateZ(-28vw) rotateX(90deg);
+    transform-origin: 50%;
+    width: 42vw;
+    height: 42vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ender-chest-scene .chest-cover-shape .face {
+    position: absolute;
+  }
+
+  .ender-chest-scene .chest-cover-shape .ft {
+    width: 42vw;
+    height: 14vw;
+    transform-origin: 50%;
+    transform: translateX(0) translateY(0) translateZ(21vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_cover_ft_bk.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-cover-shape .bk {
+    width: 42vw;
+    height: 14vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(0deg) translateX(0vw) translateY(0vw)
+      translateZ(-21vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_cover_ft_bk.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-cover-shape .rt {
+    width: 42vw;
+    height: 14vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translateX(0vw)
+      translateY(0vw) translateZ(-21vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_cover_lt_rt.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-cover-shape .lt {
+    width: 42vw;
+    height: 14vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translateX(0vw)
+      translateY(0vw) translateZ(21vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_cover_lt_rt.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-cover-shape .tp {
+    width: 42vw;
+    height: 42vw;
+    transform-origin: 50%;
+    transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateX(0)
+      translateY(0vw) translateZ(-7vw);
+  }
+
+  .ender-chest-scene .chest-cover-shape .bm {
+    width: 42vw;
+    height: 42vw;
+    transform-origin: 50%;
+    transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateX(0)
+      translateY(0vw) translateZ(7vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/ender_chest_cover_bm.png);
+    image-rendering: pixelated;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ender-chest-scene .chest-cover-shape .bm::after {
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 0.1;
+    content: "";
+  }
+
+  .light-scene {
+    width: 0.05vw;
+    height: 0.05vw;
+    position: absolute;
+    transform: perspective(10500px) rotateX(15deg) rotateY(21deg) rotateZ(-5deg)
+      translateZ(0vw);
+    transform-style: preserve-3d;
+    box-shadow: 0 0 20vw 12vw rgba(255, 255, 255, 0.4),
+      0 0 25vw 16vw rgba(255, 0, 255, 0.4), 0 0 30vw 18vw rgba(0, 255, 255, 0.4);
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    border-radius: 100%;
+  }
+
+  .light-scene.on-off-anim {
+    animation: on-off-anim 0.8s ease-in-out;
+  }
+
+  @keyframes on-off-anim {
+    0% {
+      opacity: 0.8;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.8;
+    }
+  }
+
+  .light-scene .ray-scene {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate-rays 10s ease-in-out infinite;
+  }
+
+  .light-scene .ray-scene .ray {
+    background: linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 80% 80% 0 0;
+    position: absolute;
+    opacity: 0.1;
+  }
+
+  .light-scene .ray-scene .ray.ray1 {
+    height: 170px;
+    width: 30px;
+    transform: rotate(180deg) translate(0, 10vw);
+  }
+
+  .light-scene .ray-scene .ray.ray2 {
+    height: 100px;
+    width: 8px;
+    transform: rotate(220deg) translate(0, 10vw);
+  }
+
+  .light-scene .ray-scene .ray.ray3 {
+    height: 170px;
+    width: 50px;
+    transform: rotate(250deg) translate(0, 10vw);
+  }
+
+  .light-scene .ray-scene .ray.ray4 {
+    height: 120px;
+    width: 14px;
+    transform: rotate(305deg) translate(0, 10vw);
+  }
+
+  .light-scene .ray-scene .ray.ray5 {
+    height: 140px;
+    width: 30px;
+    transform: rotate(-15deg) translate(0, 10vw);
+  }
+
+  .light-scene .ray-scene .ray.ray6 {
+    height: 160px;
+    width: 40px;
+    transform: rotate(30deg) translate(0, 10vw);
+  }
+
+  .light-scene .ray-scene .ray.ray7 {
+    height: 180px;
+    width: 10px;
+    transform: rotate(70deg) translate(0, 10vw);
+  }
+
+  .light-scene .ray-scene .ray.ray8 {
+    height: 120px;
+    width: 30px;
+    transform: rotate(100deg) translate(0, 10vw);
+  }
+
+  .light-scene .ray-scene .ray.ray9 {
+    height: 80px;
+    width: 10px;
+    transform: rotate(120deg) translate(0, 10vw);
+  }
+
+  .light-scene .ray-scene .ray.ray10 {
+    height: 190px;
+    width: 23px;
+    transform: rotate(150deg) translate(0, 10vw);
+  }
+
+  @keyframes rotate-rays {
+    0% {
+      transform: rotateZ(0deg);
+    }
+
+    25% {
+      transform: rotateZ(3deg);
+    }
+
+    75% {
+      transform: rotateZ(-3deg);
+    }
+
+    100% {
+      transform: rotateZ(0deg);
+    }
+  }
+
+  .package1-scene {
+    transform: perspective(10500px) rotateX(15deg) rotateY(21deg) rotateZ(-5deg);
+    position: absolute;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 2s hover-package1 ease-in-out infinite alternate;
+  }
+
+  @keyframes hover-package1 {
+    from {
+      will-change: unset;
+      transform: perspective(10500px) rotateX(15deg) rotateY(21deg)
+        rotateZ(-5deg) translateY(0vw);
+    }
+
+    to {
+      will-change: transform;
+      transform: perspective(10500px) rotateX(15deg) rotateY(21deg)
+        rotateZ(-5deg) translateY(-0.5vw);
+    }
+  }
+
+  .package1-scene .box-shape {
+    width: 16vw;
+    height: 8vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+  }
+
+  .package1-scene .box-shape .face {
+    position: absolute;
+    color: #ffffff;
+  }
+
+  .package1-scene .box-shape .ft {
+    width: 16vw;
+    height: 20vw;
+    transform-origin: 50%;
+    transform: translateX(0) translateY(0) translateZ(4vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(38, 39, 41, 0.5);
+  }
+
+  .package1-scene .box-shape .ft .front-cover {
+    width: 16vw;
+    height: 20vw;
+    clip-path: polygon(
+      0% 0%,
+      0% 100%,
+      1.6vw 20vw,
+      1.6vw 2vw,
+      12.8vw 2vw,
+      12.8vw 13.6vw,
+      1.6vw 13.6vw,
+      1.6vw 20vw,
+      100% 100%,
+      100% 0%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .package1-scene .box-shape .ft .front-cover::before {
+    background-image: url("https://raw.githubusercontent.com/maxym11/minecraft/master/obsidian.png");
+    image-rendering: pixelated;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 1;
+    content: "";
+  }
+
+  .package1-scene .box-shape .ft .front-cover::after {
+    background-color: #90e0f3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 0.1;
+    content: "";
+  }
+
+  .package1-scene .box-shape .ft .logo {
+    width: 10vw;
+    height: 2vw;
+    background-image: url(https://logos-download.com/wp-content/uploads/2016/03/Minecraft_logo-700x114.png);
+    image-rendering: crisp-edges;
+    background-size: 8vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateX(-0.8vw) translateY(3.7vw);
+    z-index: 11;
+  }
+
+  .package1-scene .box-shape .ft .product-name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2vw;
+    font-family: "Minecraft Title";
+    position: absolute;
+    transform: translateY(5.9vw);
+    z-index: 11;
+    padding-left: 1.6vw;
+  }
+
+  .package1-scene .box-shape .ft .product-description1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.5vw;
+    font-family: "Minecraft Title";
+    position: absolute;
+    transform: translateY(7.8vw);
+    z-index: 11;
+    padding-left: 1.6vw;
+  }
+
+  .package1-scene .box-shape .ft .product-description2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.5vw;
+    font-family: "Minecraft Title";
+    position: absolute;
+    transform: translateY(8.6vw);
+    z-index: 11;
+    padding-left: 1.6vw;
+  }
+
+  .package1-scene .box-shape .ft .product-features {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2vw;
+    font-family: "Minecraft Title";
+    position: absolute;
+    transform: translateX(6.2vw) rotateZ(-90deg);
+    z-index: 11;
+  }
+
+  .package1-scene .box-shape .bk {
+    width: 16vw;
+    height: 20vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(0deg) translateX(0vw) translateY(0vw)
+      translateZ(-4vw);
+    background-color: #000000;
+  }
+
+  .package1-scene .box-shape .rt {
+    width: 8vw;
+    height: 20vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translateX(0vw)
+      translateY(0vw) translateZ(8vw);
+  }
+
+  .package1-scene .box-shape .lt {
+    width: 8vw;
+    height: 20vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translateX(0vw)
+      translateY(0vw) translateZ(-8vw);
+  }
+
+  .package1-scene .box-shape .tp {
+    width: 16vw;
+    height: 8vw;
+    transform-origin: 50%;
+    transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateX(0)
+      translateY(0vw) translateZ(-10vw);
+  }
+
+  .package1-scene .box-shape .bm {
+    width: 16vw;
+    height: 8vw;
+    transform-origin: 50%;
+    transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateX(0)
+      translateY(0vw) translateZ(10vw);
+  }
+
+  .package1-scene .box-shape .rt::before,
+  .package1-scene .box-shape .lt::before,
+  .package1-scene .box-shape .tp::before,
+  .package1-scene .box-shape .bm::before {
+    background-image: url("https://raw.githubusercontent.com/maxym11/minecraft/master/obsidian.png");
+    image-rendering: pixelated;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 1;
+    content: "";
+  }
+
+  .package1-scene .box-shape .rt::after,
+  .package1-scene .box-shape .lt::after,
+  .package1-scene .box-shape .tp::after,
+  .package1-scene .box-shape .bm::after {
+    background-color: #90e0f3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 0.1;
+    content: "";
+  }
+
+  .package1-scene .block-shape {
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: translate3d(-0.8vw, -1.8vw, 0);
+  }
+
+  .package1-scene .block-shape .face {
+    position: absolute;
+    color: #ffffff;
+    background-size: cover;
+    background-size: 100% 100% !important;
+    background-position: center;
+    image-rendering: pixelated;
+  }
+
+  .package1-scene .block-shape .ft {
+    width: 4vw;
+    height: 4vw;
+    transform-origin: 50%;
+    transform: translateX(0) translateY(0) translateZ(2vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/grass_block_side.png);
+  }
+
+  .package1-scene .block-shape .bk {
+    width: 4vw;
+    height: 4vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(0deg) translateX(0vw) translateY(0vw)
+      translateZ(-2vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/grass_block_side.png);
+  }
+
+  .package1-scene .block-shape .rt {
+    width: 4vw;
+    height: 4vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translateX(0vw)
+      translateY(0vw) translateZ(2vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/grass_block_side.png);
+  }
+
+  .package1-scene .block-shape .lt {
+    width: 4vw;
+    height: 4vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translateX(0vw)
+      translateY(0vw) translateZ(-2vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/grass_block_side.png);
+  }
+
+  .package1-scene .block-shape .tp {
+    width: 4vw;
+    height: 4vw;
+    transform-origin: 50%;
+    transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateX(0)
+      translateY(0vw) translateZ(-2vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/grass_block_top.png);
+  }
+
+  .package1-scene .block-shape .bm {
+    width: 4vw;
+    height: 4vw;
+    transform-origin: 50%;
+    transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateX(0)
+      translateY(0vw) translateZ(2vw);
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/dirt.png);
+  }
+
+  .package2-scene {
+    transform: perspective(10500px) rotateX(15deg) rotateY(21deg) rotateZ(-5deg);
+    position: absolute;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 2s hover-package2 ease-in-out infinite alternate;
+  }
+
+  @keyframes hover-package2 {
+    from {
+      will-change: unset;
+      transform: perspective(10500px) rotateX(15deg) rotateY(21deg)
+        rotateZ(-5deg) translateY(0vw);
+    }
+
+    to {
+      will-change: transform;
+      transform: perspective(10500px) rotateX(15deg) rotateY(21deg)
+        rotateZ(-5deg) translateY(-0.5vw);
+    }
+  }
+
+  .package2-scene .holder-shape {
+    width: 16vw;
+    height: 8vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+  }
+
+  .package2-scene .holder-shape .face {
+    position: absolute;
+    color: #ffffff;
+    border-radius: 1vw;
+  }
+
+  .package2-scene .holder-shape .ft {
+    width: 16vw;
+    height: 20vw;
+    transform-origin: 50%;
+    transform: rotateX(0deg) rotateY(0deg) translateX(0vw) translateY(0vw);
+    clip-path: polygon(
+      0% 0%,
+      0% 100%,
+      43% 100%,
+      43% 5%,
+      62% 5%,
+      62% 9%,
+      43% 9%,
+      43% 100%,
+      100% 100%,
+      100% 0%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .package2-scene .holder-shape .ft::before {
+    background-image: url("https://raw.githubusercontent.com/maxym11/minecraft/master/obsidian.png");
+    image-rendering: pixelated;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 1;
+    content: "";
+    border-radius: 1vw;
+  }
+
+  .package2-scene .holder-shape .ft::after {
+    background-color: #90e0f3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 0.1;
+    content: "";
+    border-radius: 1vw;
+  }
+
+  .package2-scene .holder-shape .ft .product-name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.5vw;
+    font-family: "Minecraft Title";
+    position: absolute;
+    transform: translateY(-5.5vw);
+    z-index: 11;
+    padding-left: 1.5vw;
+  }
+
+  .package2-scene .holder-shape .ft .product-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.5vw;
+    font-family: "Minecraft Title";
+    position: absolute;
+    transform: translateY(9.4vw);
+    z-index: 11;
+    padding-right: 1.5vw;
+    opacity: 0.8;
+  }
+
+  .package2-scene .dome-shape {
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 50%;
+    transform: translate3d(0vw, 3vw, 2.1vw) rotateX(90deg) rotateY(360deg)
+      rotateZ(0deg);
+    width: 12vw;
+    height: 4vw;
+  }
+
+  .package2-scene .dome-shape .face {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 0 0;
+    background-size: 100% 100% !important;
+    background-position: center;
+    background-color: rgba(240, 240, 240, 0.15);
+  }
+
+  .package2-scene .dome-shape .ft {
+    transform: translateZ(5.5vw);
+    width: 10vw;
+    height: 100%;
+    margin-left: 1vw;
+  }
+
+  .package2-scene .dome-shape .bk {
+    transform: translateZ(-5.5vw) rotateY(180deg);
+    width: 10vw;
+    height: 100%;
+    margin-left: -1vw;
+    left: 100%;
+  }
+
+  .package2-scene .dome-shape .rt {
+    width: 11vw;
+    height: 4vw;
+    width: 9vw;
+    transform: rotateY(-90deg) translateX(-50%);
+  }
+
+  .package2-scene .dome-shape .lt {
+    width: 11vw;
+    height: 4vw;
+    width: 9vw;
+    transform: rotateY(90deg) translateX(-50%);
+    left: 100%;
+  }
+
+  .package2-scene .dome-shape .tp {
+    width: 13vw;
+    height: 12vw;
+    border-radius: 1vw;
+    transform: rotateX(90deg) translateY(-50%) translateX(-0.5vw);
+  }
+
+  .package2-scene .dome-shape .bm {
+    width: 12vw;
+    height: 11vw;
+    border-radius: 1vw;
+    transform: rotateX(-90deg) translateY(-50%);
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .package2-scene .dome-shape .bm .logo {
+    width: 10vw;
+    height: 2vw;
+    background-image: url(https://logos-download.com/wp-content/uploads/2016/03/Minecraft_logo-700x114.png);
+    image-rendering: crisp-edges;
+    background-size: 8vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(4vw);
+    z-index: 11;
+  }
+
+  .package2-scene .dome-shape .cr {
+    width: 1vw;
+    left: 0.5vw;
+    position: absolute;
+    transform-style: preserve-3d;
+    height: 100%;
+  }
+
+  .package2-scene .dome-shape .cr .side {
+    height: 100%;
+  }
+
+  .package2-scene .dome-shape .side {
+    left: 50%;
+    width: 0.5608983849vw;
+  }
+
+  .package2-scene .dome-shape .cr-0 {
+    transform: translate3D(10vw, 0, 4.5vw);
+  }
+
+  .package2-scene .dome-shape .cr-0 .s0 {
+    transform: rotateY(15deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-0 .s1 {
+    transform: rotateY(45deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-0 .s2 {
+    transform: rotateY(75deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-1 {
+    transform: translate3D(10vw, 0, -4.5vw);
+  }
+
+  .package2-scene .dome-shape .cr-1 .s0 {
+    transform: rotateY(105deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-1 .s1 {
+    transform: rotateY(135deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-1 .s2 {
+    transform: rotateY(165deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-2 {
+    transform: translate3D(0, 0, -4.5vw);
+  }
+
+  .package2-scene .dome-shape .cr-2 .s0 {
+    transform: rotateY(195deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-2 .s1 {
+    transform: rotateY(225deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-2 .s2 {
+    transform: rotateY(255deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-3 {
+    transform: translate3D(0, 0, 4.5vw);
+  }
+
+  .package2-scene .dome-shape .cr-3 .s0 {
+    transform: rotateY(285deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-3 .s1 {
+    transform: rotateY(315deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .dome-shape .cr-3 .s2 {
+    transform: rotateY(345deg) translate3D(-50%, 0, 0.975vw);
+  }
+
+  .package2-scene .sword-shape {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/diamond_sword.png);
+    image-rendering: pixelated;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 50%;
+    transform: translate3D(0vw, 2.5vw, 2.1vw);
+    filter: drop-shadow(5px 5px 5px #222222);
+  }
+
+  .package3-scene {
+    transform: perspective(10500px) rotateX(15deg) rotateY(21deg) rotateZ(-5deg);
+    position: absolute;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 2s hover-package3 ease-in-out infinite alternate;
+  }
+
+  @keyframes hover-package3 {
+    from {
+      will-change: unset;
+      transform: perspective(10500px) rotateX(15deg) rotateY(21deg)
+        rotateZ(-5deg) translateY(0vw);
+    }
+
+    to {
+      will-change: transform;
+      transform: perspective(10500px) rotateX(15deg) rotateY(21deg)
+        rotateZ(-5deg) translateY(-0.5vw);
+    }
+  }
+
+  .package3-scene .face {
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 0 0;
+    background-color: rgba(144, 224, 243, 0.05);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .package3-scene .face::before {
+    background-image: url("https://raw.githubusercontent.com/maxym11/minecraft/master/obsidian.png");
+    image-rendering: pixelated;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 1;
+    content: "";
+  }
+
+  .package3-scene .face::after {
+    background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2012/05/31.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 0.05;
+    content: "";
+  }
+
+  .package3-scene .pack-shape {
+    width: 14vw;
+    height: 20vw;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 50%;
+  }
+
+  .package3-scene .pack-shape .ft {
+    transform: translateZ(0.3vw);
+    width: 13.4vw;
+    margin-left: 0.3vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .package3-scene .pack-shape .ft .product-name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6vw;
+    font-family: "Minecraft Title";
+    position: absolute;
+    transform: translateY(-6vw);
+    z-index: 11;
+  }
+
+  .package3-scene .pack-shape .ft .product-description {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65vw;
+    font-family: "Minecraft Title";
+    position: absolute;
+    transform: translateY(-4.5vw);
+    z-index: 11;
+  }
+
+  .package3-scene .pack-shape .ft .image1 {
+    width: 7vw;
+    height: 7vw;
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/piglin_brute.png);
+    image-rendering: crisp-edges;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateX(-1vw) translateY(1.5vw);
+    z-index: 11;
+    opacity: 1;
+  }
+
+  .package3-scene .pack-shape .ft .image2 {
+    width: 5vw;
+    height: 5vw;
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/slime.png);
+    image-rendering: crisp-edges;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateX(3vw) translateY(1.5vw) rotateZ(-30deg) scaleX(-1);
+    z-index: 10;
+    opacity: 1;
+  }
+
+  .package3-scene .pack-shape .ft .image3 {
+    width: 5vw;
+    height: 5vw;
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/shulker_box.png);
+    image-rendering: crisp-edges;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateX(-3vw) translateY(1.5vw) rotateZ(30deg) scaleX(1);
+    z-index: 10;
+    opacity: 1;
+  }
+
+  .package3-scene .pack-shape .ft .logo {
+    width: 10vw;
+    height: 2vw;
+    background-image: url(https://logos-download.com/wp-content/uploads/2016/03/Minecraft_logo-700x114.png);
+    image-rendering: crisp-edges;
+    background-size: 8vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(8vw);
+    z-index: 11;
+  }
+
+  .package3-scene .pack-shape .bk {
+    transform: translateZ(-0.3vw) rotateY(180deg);
+    width: 13.4vw;
+    margin-left: -0.3vw;
+    height: 100%;
+    left: 100%;
+  }
+
+  .package3-scene .pack-shape .rt {
+    width: 0.6vw;
+    height: 20vw;
+    width: 0vw;
+    transform: rotateY(-90deg) translateX(-50%);
+  }
+
+  .package3-scene .pack-shape .lt {
+    width: 0.6vw;
+    height: 20vw;
+    width: 0vw;
+    transform: rotateY(90deg) translateX(-50%);
+    left: 100%;
+  }
+
+  .package3-scene .pack-shape .tp {
+    width: 14vw;
+    height: 0.6vw;
+    border-radius: 0.3vw;
+    transform: rotateX(90deg) translateY(-50%);
+  }
+
+  .package3-scene .pack-shape .bm {
+    width: 14vw;
+    height: 0.6vw;
+    border-radius: 0.3vw;
+    transform: rotateX(-90deg) translateY(-50%);
+    top: 100%;
+  }
+
+  .package3-scene .pack-shape .cr {
+    width: 0.3vw;
+    left: 0.15vw;
+    position: absolute;
+    transform-style: preserve-3d;
+    height: 100%;
+  }
+
+  .package3-scene .pack-shape .cr .side {
+    height: 100%;
+  }
+
+  .package3-scene .pack-shape .side {
+    width: 0.1857695155vw;
+    left: 50%;
+  }
+
+  .package3-scene .pack-shape .cr-0 {
+    transform: translate3D(13.4vw, 0, 0vw);
+  }
+
+  .package3-scene .pack-shape .cr-0 .s0 {
+    transform: rotateY(15deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-0 .s1 {
+    transform: rotateY(45deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-0 .s2 {
+    transform: rotateY(75deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-1 {
+    transform: translate3D(13.4vw, 0, 0vw);
+  }
+
+  .package3-scene .pack-shape .cr-1 .s0 {
+    transform: rotateY(105deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-1 .s1 {
+    transform: rotateY(135deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-1 .s2 {
+    transform: rotateY(165deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-2 {
+    transform: translate3D(0, 0, 0vw);
+  }
+
+  .package3-scene .pack-shape .cr-2 .s0 {
+    transform: rotateY(195deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-2 .s1 {
+    transform: rotateY(225deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-2 .s2 {
+    transform: rotateY(255deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-3 {
+    transform: translate3D(0, 0, 0vw);
+  }
+
+  .package3-scene .pack-shape .cr-3 .s0 {
+    transform: rotateY(285deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-3 .s1 {
+    transform: rotateY(315deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .pack-shape .cr-3 .s2 {
+    transform: rotateY(345deg) translate3D(-50%, 0, 0.275vw);
+  }
+
+  .package3-scene .middle {
+    width: 15.8vw;
+    height: 21.8vw;
+    background-color: rgba(144, 224, 243, 0.1);
+    background-image: url("https://raw.githubusercontent.com/maxym11/minecraft/master/obsidian.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+
+  .package3-scene .middle::before {
+    background-image: url(https://raw.githubusercontent.com/maxym11/minecraft/master/vertical_lines.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 0.15;
+    content: "";
+  }
+
+  .crsl-ctn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+    background-color: transparent;
+  }
+
+  .crsl-ctn .crsl-all-cells-ctn {
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .crsl-ctn .crsl-all-cells-ctn .crsl-cell {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .crsl-ctn .crsl-all-cells-ctn .crsl-cell:nth-of-type(1) {
+    position: absolute;
+    transform: translate(0%, 0%);
+  }
+
+  .crsl-ctn .crsl-all-cells-ctn .crsl-cell:nth-of-type(2) {
+    position: absolute;
+    transform: translate(100%, 0%);
+  }
+
+  .crsl-ctn .crsl-all-cells-ctn .crsl-cell:nth-of-type(3) {
+    position: absolute;
+    transform: translate(200%, 0%);
+  }
+
+  .crsl-ctn .crsl-all-cells-ctn .crsl-cell:nth-of-type(4) {
+    position: absolute;
+    transform: translate(300%, 0%);
+  }
+
+  .crsl-ctn .crsl-controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .crsl-ctn .crsl-controls .crsl-prev {
+    margin-left: 30px;
+    cursor: pointer;
+    transform: scaleX(-1);
+  }
+
+  .crsl-ctn .crsl-controls .crsl-next {
+    margin-right: 30px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  // Defines parameters for dynamic customization and the update function.
+  const connectionInstructions = {
+    params: [
+      {
+        name: "productInfoText",
+        type: "text",
+        defaultValue: "enter text here",
+        label: "Product Information",
+      },
+      {
+        name: "productInfoTextSize",
+        type: "text",
+        defaultValue: "16px",
+        label: "Product Info Text Size",
+      },
+      {
+        name: "productInfoTextColor",
+        type: "color",
+        defaultValue: "#000000",
+        label: "Product Info Text Color",
+      },
+      {
+        name: "productHeadingSize",
+        type: "text",
+        defaultValue: "24px",
+        label: "Product Heading Size",
+      },
+      {
+        name: "productHeadingColor",
+        type: "color",
+        defaultValue: "#333333",
+        label: "Product Heading Color",
+      },
+      {
+        name: "rootBackgroundColor",
+        type: "color",
+        defaultValue: "#ffffff",
+        label: "Root Background Color",
+      },
+      // Additional parameters as needed
+    ],
+    updateFunction: "updateDynamicContent",
+  };
+
+  // Updates content dynamically based on input from an external application.
+  function updateDynamicContent(paramName, value) {
+    switch (paramName) {
+      case "productInfoText":
+        const productInfoElement = document.querySelector(".product-info");
+        if (productInfoElement) productInfoElement.innerText = value;
+        break;
+      case "productInfoTextSize":
+        const productInfoSizeElement = document.querySelector(".product-info");
+        if (productInfoSizeElement)
+          productInfoSizeElement.style.fontSize = value;
+        break;
+      case "productInfoTextColor":
+        const productInfoColorElement = document.querySelector(".product-info");
+        if (productInfoColorElement)
+          productInfoColorElement.style.color = value;
+        break;
+      case "productHeadingSize":
+        const productHeadingSizeElement =
+          document.querySelector(".product-name");
+        if (productHeadingSizeElement)
+          productHeadingSizeElement.style.fontSize = value;
+        break;
+      case "productHeadingColor":
+        const productHeadingColorElement =
+          document.querySelector(".product-name");
+        if (productHeadingColorElement)
+          productHeadingColorElement.style.color = value;
+        break;
+      case "rootBackgroundColor":
+        document.body.style.backgroundColor = value;
+        break;
+      // Handle additional parameters as needed
+    }
+    console.log(`Updated ${paramName} to ${value}`);
+  }
+
+  // Exposes the dynamic content update functionality to external applications.
+  window.connectionInstructions = connectionInstructions;
+  window.updateDynamicContent = updateDynamicContent;
+
+  // Logs the count of <div> elements as a simple debug utility.
+  document.addEventListener("DOMContentLoaded", () => {
+    const divCount = document.getElementsByTagName("div").length;
+    console.log("Number of divs is: " + divCount);
+  });
+</script>
